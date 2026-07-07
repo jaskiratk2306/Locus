@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Map Reference</title>
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+ 
+    
+     <link rel="stylesheet" href="../src/output.css?v=<?php echo time(); ?>">
+
+    
+</head>
+<style>
+    
+        ::selection {
+        background-color: rgba(49, 171, 25, 0.473); 
+        color: #000000;
+    }
+    /* animation of globe.gif */
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-1rem); }
+    }
+  
+</style>
+<body class="bg-gray-100">
+    
+
+
+    <nav class=" bg-amber-100 shadow-md fixed w-full z-100">
+        <div class=" w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="text-2xl font-bold text-green-600 ">Geo Map Reference</div>
+
+                
+                </div>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <header class="bg-center h-[550px] flex items-center justify-center text-center text-white  
+
+    bg-[url('../pro/loginbg.png')] bg-cover">
+
+
+
+        <div class="bg-black/50 max-md:w-[80%] bg-opacity-50 p-8 rounded-lg">
+            <h1 class="text-4xl font-bold">Welcome to Geo Map Reference</h1>
+            <p class="mt-2 text-lg">Explore and reference maps with ease.</p>
+            <a href="../pro/login.html" class="mt-4 inline-block px-6 py-2 bg-green-700 hover:bg-green-600
+             text-white text-lg rounded transition">
+                Get Started
+            </a>
+        </div>
+    </header>
+
+<section class="py-12 px-7 sm:px-6 md:px-8">
+    <div class=" max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        
+        <div class="md:w-1/2 w-full flex justify-center md:justify-end">
+          <img 
+            src="../pro/globe.gif"
+            alt="Interactive World Map"
+            class="animate-float w-full max-w-[480px] h-auto object-contain rounded-lg shadow-xl"
+            loading="lazy"
+            style="aspect-ratio: 1/1; min-height: 300px; max-height: 500px;"
+          >
+        </div>
+  
+        <!-- Content (Right) -->
+        <div class="md:w-1/2 w-full md:pl-8">
+          <h2 class="text-3xl sm:text-4xl font-bold text-green-700 mb-6">
+            Your World, <span class="text-amber-600">Mapped to Perfection</span>
+          </h2>
+          
+          <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            Geo Map Reference combines cutting-edge cartography with intuitive tools to deliver the most precise mapping experience. Navigate with confidence using our constantly updated global database.
+          </p>
+          
+          <ul class="space-y-4 mb-10">
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 w-6 h-6 text-green-600 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Real-time location tracking </span>
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 w-6 h-6 text-green-600 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Detailed route optimization</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="flex-shrink-0 w-6 h-6 text-green-600 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Easy access to maps when you need it most</span>
+            </li>
+          </ul>
+          
+          <div class="pt-4 flex flex-col sm:flex-row gap-4">
+            <a href="../pro/login.html" class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition duration-300 shadow-md hover:shadow-lg text-center">
+              Start Exploring
+            </a>
+            <a href="#information" class="px-6 py-3 border-2 border-green-600 text-green-700 hover:bg-green-50 font-medium rounded-lg transition duration-300 text-center">
+              Learn How It Works
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+    <div class="flex md:flex-row flex-col gap-6 m-6 p-6 md:h-[70vh] h-[100vh] text-white bg-amber-100 " id="information">
+        <!-- Card 1 -->
+        <div class="flip-card md:w-[25%] w-full h-[100vh] md:h-full [perspective:1000px] z-40">
+            <div class="flip-card-inner relative w-full h-full transition-transform duration-2000 [transform-style:preserve-3d]">
+                <div class="shadow-lg shadow-green-700/30 flip-card-front absolute w-full h-full bg-green-800/80 rounded-md p-7 backface-hidden text-2xl flex items-center font-bold">
+                    <span class="text-3xl">
+                        📍 
+                        <br>
+                    </span>
+                    Find Any Place Instantly
+                </div>
+                <div class="flip-card-back absolute w-full h-full bg-amber-500/80 rounded-md p-7 [transform:rotateY(180deg)] backface-hidden flex items-center text-2xl">
+                    Search cities, landmarks, or addresses with pinpoint accuracy.
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="flip-card md:w-[25%] w-full h-[100vh] md:h-full [perspective:1000px] z-40">
+            <div class="flip-card-inner relative w-full h-full transition-transform duration-2000 [transform-style:preserve-3d]">
+                <div class="shadow-lg shadow-green-700/30 font-bold flip-card-front absolute w-full h-full bg-green-800/80 rounded-md p-7 backface-hidden flex items-center text-2xl">
+                    🗺️ Optimized Routes, Effortless Travel
+                </div>
+                <div class="flip-card-back absolute w-full h-full bg-amber-500/80 rounded-md p-7 [transform:rotateY(180deg)] backface-hidden flex items-center text-2xl">
+                    Get the fastest path from point A to B— whether driving, walking, or cycling.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Card 3 -->
+        <div class="flip-card md:w-[25%] w-full h-[100vh] md:h-full [perspective:1000px] z-40">
+            <div class="flip-card-inner relative w-full h-full transition-transform duration-2000 [transform-style:preserve-3d]">
+                <div class="shadow-lg shadow-green-700/30 font-bold flip-card-front absolute w-full h-full bg-green-800/80 rounded-md p-7 backface-hidden flex items-center text-2xl">
+                    🌍 Discover Hidden Gems
+                </div>
+                <div class="flip-card-back absolute w-full h-full bg-amber-500/80 rounded-md p-7 [transform:rotateY(180deg)] backface-hidden flex items-center text-2xl">
+                    Find restaurants, ATMs, gas stations, and attractions near you.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="flip-card md:w-[25%] w-full h-[100vh] md:h-full [perspective:1000px] z-40">
+            <div class="flip-card-inner relative w-full h-full transition-transform duration-2000 [transform-style:preserve-3d]">
+                <div class="shadow-lg shadow-green-700/30 font-bold flip-card-front absolute w-full h-full bg-green-800/80 rounded-md p-7 backface-hidden flex items-center text-2xl">
+                    ⏰ Time & Distance Estimates
+
+                </div>
+                <div class="flip-card-back absolute w-full h-full bg-amber-500/80 rounded-md p-7 [transform:rotateY(180deg)] backface-hidden flex items-center  text-2xl">
+                    See exactly how long your trip will take and the distance you'll cover.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.querySelector('.flip-card-inner').style.transform = 'rotateY(180deg)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('.flip-card-inner').style.transform = 'rotateY(0)';
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6">
+        <p>&copy; 2025 Geo Map Reference. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

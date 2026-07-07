@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #D1266E;
+  --color-brand-secondary: #F15A50;
+  --color-brand-bg: #FCEEDB;
+  --color-brand-dark: #3B383D;
+  --color-brand-surface: #C9DCD7;
+  --color-brand-success: #4CAF50;
+  --color-brand-danger: #DD403A;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    @apply text-brand-dark bg-brand-bg antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1rem); }
+}
+
+/* Base styles for the map */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}

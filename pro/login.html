@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Map Reference - Login</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="../src/output.css?v=<?php echo time(); ?>">
+</head>
+
+<style>
+    ::selection {
+        background-color: rgba(49, 171, 25, 0.473); 
+        color: #000000;
+    }
+
+    /* remember me checkbox color changes */
+    input[type="checkbox"]#remember {
+        accent-color: #1bd082;
+    }
+</style>
+
+<body class="flex justify-center items-center h-screen bg-[url('../pro/loginbg.png')] bg-cover opacity-100">
+
+    <div class="bg-green-50 bg-opacity-90 p-8 rounded-xl shadow-2xl w-full max-w-sm transform transition duration-500 hover:scale-105 hover:shadow-green-700/40">
+        <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Geo Map Reference Login</h2>
+
+        <!-- Login Form -->
+        <form action="../pro/login.php" method="POST" novalidate>
+            <!-- Email -->
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">
+                    Email Address <span class="text-red-500">*</span>
+                </label>
+                
+                <input type="email" id="email" name="email" required  
+                    class="bg-[#eeffef] mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    placeholder="Enter your email"
+                    >
+                <p class="mt-1 text-xs text-red-500 hidden" id="emailError">Email is required.</p>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium text-gray-700">
+                    Password <span class="text-red-500">*</span>
+                </label>
+                <input type="password" id="password" name="password" required
+                     
+                    title="Password must be at least 8 characters with uppercase, lowercase, number & special character."
+                    class="bg-[#eeffef] mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    placeholder="Enter your password">
+                <p class="mt-1 text-xs text-red-500 hidden" id="passwordError">
+                    Password must be at least 8 characters with uppercase, lowercase, number & special character.
+                </p>
+            </div>
+
+            <!-- Remember Me + Forgot -->
+            <div class="mb-6 flex items-center justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" id="remember" name="remember"
+                        class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                    <label for="remember" class="ml-2 text-sm text-gray-600">Remember me</label>
+                </div>
+                <a href="../pro/forgot.html" class="text-sm text-green-600 hover:text-green-800">Forgot Password?</a>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit"
+                class="w-full bg-green-600 text-white p-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                Login
+            </button>
+        </form>
+
+        <!-- Sign Up Link -->
+        <div class="mt-6 text-center">
+            <p class="text-sm text-gray-600">
+                Don't have an account?
+                <a href="../pro/signup.html" class="text-emerald-600 hover:text-green-800">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+   
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- JavaScript for client-side validation -->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            let valid = true;
+
+            // Email check
+            if (!email.value.trim()) {
+                document.getElementById('emailError').classList.remove('hidden');
+                valid = false;
+            } else {
+                document.getElementById('emailError').classList.add('hidden');
+            }
+
+            // Password check
+            const strongPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}/;
+            if (!password.value.match(strongPassword)) {
+                document.getElementById('passwordError').classList.remove('hidden');
+                valid = false;
+            } else {
+                document.getElementById('passwordError').classList.add('hidden');
+            }
+
+            if (!valid) {
+                e.preventDefault(); // prevent form from submitting if invalid
+            }
+        });
+
+        // jquery used for changing the color of the input box
+        $(document).ready(function(){
+            $('#email').focus(function(){
+                $(this).css('background-color', '#ccf1dc');
+            }).blur(function(){
+                $(this).css('background-color', '#eeffef');
+            });
+
+            $('#password').focus(function(){
+                $(this).css('background-color', '#ccf1dc');
+            }).blur(function(){
+                $(this).css('background-color', '#eeffef');
+            });
+        });
+
+        
+document.querySelector('form').addEventListener('submit', function(e) {
+    const remember = document.getElementById('remember').checked;
+    const email = document.getElementById('email').value;
+    
+    if (remember) {
+        // cookie set for 30 days if "Remember Me" is checked
+        document.cookie = `remembered_email=${encodeURIComponent(email)}; max-age=${30 * 24 * 60 * 60}; path=/`;
+    } else {
+        
+        document.cookie = "remembered_email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    }
+    
+    
+});
+
+
+window.onload = function() {
+    const rememberCheckbox = document.getElementById('remember');
+    const emailInput = document.getElementById('email');
+    const savedEmail = getCookie('remembered_email');
+    
+    if (savedEmail && rememberCheckbox) {
+        emailInput.value = decodeURIComponent(savedEmail);
+        rememberCheckbox.checked = true; 
+    }
+};
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+        
+    </script>
+
+</body>
+</html>
