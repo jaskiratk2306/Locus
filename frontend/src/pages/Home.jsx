@@ -111,7 +111,7 @@ const Home = () => {
           <FadeSection>
             <div className="text-center mb-20">
               <h2 className="text-sm font-bold tracking-widest text-brand-secondary uppercase mb-3">Simple Process</h2>
-              <h3 className="text-3xl md:text-5xl font-bold font-heading text-brand-dark">How GeoMap works</h3>
+              <h3 className="text-3xl md:text-5xl font-bold font-heading text-brand-dark">How Locus works</h3>
             </div>
           </FadeSection>
           
@@ -148,7 +148,7 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { quote: "GeoMap completely changed how I plan my road trips. The routing is incredibly accurate.", name: "Sarah Jenkins", role: "Travel Blogger" },
+              { quote: "Locus completely changed how I plan my road trips. The routing is incredibly accurate.", name: "Sarah Jenkins", role: "Travel Blogger" },
               { quote: "As a delivery driver, I rely on fast, responsive maps. This platform has never let me down.", name: "Marcus Wright", role: "Logistics Pro" },
               { quote: "The clean UI and fast search make it my go-to reference for geography projects.", name: "Elena Rostova", role: "Educator" }
             ].map((test, i) => (
@@ -185,7 +185,7 @@ const Home = () => {
               <div className="relative z-10">
                 <h2 className="text-4xl md:text-5xl font-bold font-heading text-brand-bg mb-6">Ready to navigate differently?</h2>
                 <p className="text-xl text-brand-bg/80 mb-10 max-w-2xl mx-auto">
-                  Join thousands of users who trust GeoMap Reference for their daily navigation and geographical needs.
+                  Join thousands of users who trust Locus Reference for their daily navigation and geographical needs.
                 </p>
                 <Link to="/register" className="inline-block px-10 py-4 bg-brand-primary text-white rounded-full font-bold text-lg hover:bg-brand-secondary transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   Create Free Account
@@ -201,16 +201,16 @@ const Home = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-white font-bold">
-              G
+              L
             </div>
-            <span className="text-xl font-bold font-heading tracking-tight">Geo<span className="text-brand-primary">Map</span></span>
+            <span className="text-xl font-bold font-heading tracking-tight">Lo<span className="text-brand-primary">cus</span></span>
           </div>
           <div className="flex gap-6 text-brand-bg/70 text-sm">
             <Link to="/about" className="hover:text-brand-secondary transition-colors">About Us</Link>
             <Link to="/contact" className="hover:text-brand-secondary transition-colors">Contact</Link>
             <Link to="/privacy" className="hover:text-brand-secondary transition-colors">Privacy Policy</Link>
           </div>
-          <p className="text-brand-bg/50 text-sm">&copy; 2026 Geo Map Reference. All Rights Reserved.</p>
+          <p className="text-brand-bg/50 text-sm">&copy; 2026 Locus Reference. All Rights Reserved.</p>
         </div>
       </footer>
     </div>

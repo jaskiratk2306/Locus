@@ -1,0 +1,22 @@
+# Node
+node_modules/
+dist/
+.eslintcache
+.stylelintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build and package output
+backend/target/
+target/
+.mvn-repo/
+
+# IDEs & System
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Compiled classes
+*.class

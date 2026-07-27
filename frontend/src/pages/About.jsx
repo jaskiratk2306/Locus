@@ -5,7 +5,7 @@ const About = () => {
     <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-brand-surface rounded-2xl shadow-sm border border-brand-dark/10 overflow-hidden">
         <div className="bg-brand-primary px-8 py-12 text-brand-bg text-center">
-          <h1 className="text-4xl font-bold mb-4">About GeoMap</h1>
+          <h1 className="text-4xl font-bold mb-4">About Locus</h1>
           <p className="text-xl text-brand-bg max-w-2xl mx-auto">
             A comprehensive geographical reference tool built for modern web explorers.
           </p>
@@ -20,7 +20,7 @@ const About = () => {
               Our Purpose
             </h2>
             <p className="text-brand-dark leading-relaxed">
-              GeoMap Reference started as a simple PHP-based utility for finding geographical data. 
+              Locus Reference started as a simple PHP-based utility for finding geographical data. 
               It has since evolved into a full-featured reference platform where users can search for locations, 
               find shortest routes, and save their favorite spots across the globe. Our goal is to make 
               navigating the world's data as intuitive and fast as possible.

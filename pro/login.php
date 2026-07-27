@@ -2,7 +2,7 @@
 session_start();
 
 $host = "localhost";
-$dbname = "geomap";
+$dbname = "locus";
 $username = "root";
 $password = "";
 
@@ -60,3 +60,4 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     }
 }
 ?>
+

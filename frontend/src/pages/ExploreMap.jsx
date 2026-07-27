@@ -37,7 +37,7 @@ const ExploreMap = () => {
         />
         <Marker position={[21.0000, 78.0000]}>
           <Popup>
-            India <br /> Welcome to Geo Map Reference.
+            India <br /> Welcome to Locus Reference.
           </Popup>
         </Marker>
       </MapContainer>

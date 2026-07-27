@@ -6,7 +6,7 @@ if (!isset($_SESSION['reset_email'])) {
 }
 
 $host = "localhost";
-$dbname = "geomap";
+$dbname = "locus";
 $username = "root";
 $password = "";
 
@@ -39,3 +39,4 @@ if ($stmt->execute()) {
     echo "<script>alert('Error resetting password. Please try again.'); window.location.href = 'reset_password.html';</script>";
 }
 ?>
+

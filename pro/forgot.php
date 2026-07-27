@@ -1,7 +1,7 @@
 <?php
 session_start();
 $host = "localhost";
-$dbname = "geomap";
+$dbname = "locus";
 $username = "root";
 $password = "";
 
@@ -40,3 +40,4 @@ else {
     echo "<script>alert('Invalid email or secret phrase.'); window.location.href = 'forgot.html';</script>";
 }
 ?>
+

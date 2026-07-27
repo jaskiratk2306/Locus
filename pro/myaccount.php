@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $host = "localhost";
-$dbname = "geomap";
+$dbname = "locus";
 $username = "root";
 $password = "";
 
@@ -114,3 +114,4 @@ if (isset($_POST['logout'])) {
     exit();
 }
 ?>
+

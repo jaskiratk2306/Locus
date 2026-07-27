@@ -28,9 +28,9 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-white font-bold shadow-md group-hover:bg-brand-secondary transition-colors">
-              G
+              L
             </div>
-            <span className="text-xl font-bold font-heading text-brand-dark tracking-tight">Geo<span className="text-brand-primary">Map</span></span>
+            <span className="text-xl font-bold font-heading text-brand-dark tracking-tight">Lo<span className="text-brand-primary">cus</span></span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$dbname = "geomap";
+$dbname = "locus";
 $username = "root";
 $password = "";
 

@@ -1,4 +1,4 @@
-package com.geomap.backend;
+package com.locus.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

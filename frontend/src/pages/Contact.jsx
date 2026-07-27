@@ -59,7 +59,7 @@ const Contact = () => {
                   </svg>
                   <div>
                     <h4 className="font-medium text-brand-bg">Email</h4>
-                    <p className="text-brand-bg text-sm">support@geomap.com</p>
+                    <p className="text-brand-bg text-sm">support@locus.com</p>
                   </div>
                 </div>
               </div>
